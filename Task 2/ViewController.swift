@@ -14,13 +14,7 @@ class ViewController: UIViewController {
 
     var currentLight: Lights = .red
     
-    @IBOutlet weak var redView: UIView! {
-        didSet {
-            redView.layer.cornerRadius = redView.frame.width / 2
-            
-        }
-    }
-
+    @IBOutlet weak var redView: UIView!
     @IBOutlet weak var yellowView: UIView!
     @IBOutlet weak var greenView: UIView!
     @IBOutlet weak var startButton: UIButton!
@@ -50,6 +44,7 @@ class ViewController: UIViewController {
         yellowView.alpha = 0.3
         greenView.alpha = 0.3
         
+        redView.layer.cornerRadius = redView.frame.width / 2
         yellowView.layer.cornerRadius = yellowView.frame.width / 2
         greenView.layer.cornerRadius = greenView.frame.width / 2
         
